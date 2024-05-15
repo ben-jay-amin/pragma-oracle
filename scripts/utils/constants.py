@@ -62,6 +62,8 @@ elif NETWORK["name"] == "sepolia":
     NETWORK["chain_id"] = (
         393402133025997798000961  # TODO: replace with starknet_py upgrade
     )
+elif NETWORK["name"] == "katana":
+    NETWORK["chain_id"] = int.from_bytes(b"katana", "big")
 else:
     NETWORK["chain_id"] = StarknetChainId.TESTNET
 

@@ -200,7 +200,7 @@ async def declare_v2(contract_name, port=None):
 
     # Create Declare v2 transaction
     account = await get_starknet_account(port=port)
-    declare_v2_transaction = await account.sign_declare_v2_transaction(
+    declare_v2_transaction = await account.sign_declare_v2(
         compiled_contract=contract_compiled_sierra,
         compiled_class_hash=casm_class_hash,
         max_fee=MAX_FEE,
